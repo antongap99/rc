@@ -1,16 +1,15 @@
 import {Suspense} from 'react';
-import './style/index.scss'
+import './styles/index.scss'
 import { Route, Routes} from 'react-router-dom'
-import {MainPageAsync} from "./pages/mainPage/MainPageAsync";
-import {AboutPageAsync} from "./pages/aboutPage/AboutPageAsync";
-
+import {MainPageAsync} from 'pages';
+import {AboutPageAsync} from "pages";
 import cn from 'classnames';
-import {useTheme} from "./context/theme/useTheme";
-import {classNames} from "./helpers/ClassNames";
+import {useTheme} from "./providers/themeProvider";
+
 
 const App = () => {
     const {theme, toggleTheme} = useTheme();
-    console.log(classNames('app', {'hover': true}, ['apps']))
+
     return (
         <div className={cn('app', theme)}>
             <h1>React App</h1>
