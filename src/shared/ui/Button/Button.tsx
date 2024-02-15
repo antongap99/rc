@@ -1,15 +1,27 @@
 import cn from "classnames";
 import style from './Button.module.scss'
+import {ButtonHTMLAttributes, ReactNode} from "react";
 
-interface  ButtonProps {
-    className?: string;
+export enum ThemeBottom  {
+    CLEAR = 'clear',
 
 }
 
-export const Button = ({className}: ButtonProps) =>{
+
+interface  ButtonProps extends  ButtonHTMLAttributes<HTMLButtonElement>{
+    className?: string;
+    theme?: ThemeBottom;
+    children: ReactNode
+}
+
+export const Button = (props: ButtonProps) =>{
+    const {theme, className, children,  ...otherProps } = props;
     return  (
-        <div className={cn(style.Button)}>
-        </div>
+        <button
+            className={cn(style.Button, style[theme])} {...otherProps}
+        >
+            {children}
+        </button>
     )
 }
 
