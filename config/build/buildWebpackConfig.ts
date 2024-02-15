@@ -14,6 +14,7 @@ export function buildWebpackConfig(options: BuildOptions):webpack.Configuration{
          output: {
              path: paths.build,
              filename: '[name].[contenthash].bundle.js',
+             assetModuleFilename: 'assets/[hash][ext][query]',
              clean: true,
          },
          plugins: buildPlugins(options),

@@ -1,25 +1,19 @@
 import {Suspense} from 'react';
 import './styles/index.scss'
-import { Route, Routes} from 'react-router-dom'
-import {MainPageAsync} from 'pages';
-import {AboutPageAsync} from "pages";
 import cn from 'classnames';
 import {useTheme} from "./providers/themeProvider";
+import {AppRouter} from "app/providers/router";
+import {Navbar} from "widgets/NavBar";
+import {ThemeSwitcher} from "widgets/ThemeSwitcherBtn";
 
 
 const App = () => {
-    const {theme, toggleTheme} = useTheme();
+    const {theme} = useTheme();
 
     return (
         <div className={cn('app', theme)}>
-            <h1>React App</h1>
-            <button onClick={toggleTheme}>Toggle</button>
-            <Suspense fallback={<div>loading...</div>}>
-                <Routes>
-                    <Route path={'/'} element={<MainPageAsync/>}/>
-                    <Route path={'/about'} element={<AboutPageAsync/>}/>
-                </Routes>
-            </Suspense>
+            <Navbar/>
+            <AppRouter/>
         </div>
     );
 };

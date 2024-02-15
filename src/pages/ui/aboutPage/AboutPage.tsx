@@ -5,7 +5,6 @@ const AboutPage = () => {
     return (
         <div>
             AboutPage
-            <Link to={'/'}>К главной</Link>
         </div>
     );
 };

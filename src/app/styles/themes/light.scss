@@ -1,6 +1,17 @@
 .light {
   --bg-color: #cac0c0;
+  --inverted-bg-color: #2f2d2d;
 
   --primary-color: #e94995;
   --secondary-color: #80f4ec;
+
+  // text
+  --text-color: #252323;
+  --inverted-text-color: #e3e2e2;
+
+  --link-color-primary: #b4b2b2;
+  --link-color-secondary: #b4b3b3;
+
+  --inverted-link-color-primary: #2a2a2a;
+  --inverted-link-color-secondary: #444242;
 }

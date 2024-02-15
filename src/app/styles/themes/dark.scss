@@ -1,6 +1,17 @@
 .dark {
   --bg-color: #2f2d2d;
+  --inverted-bg-color: #cac0c0;
 
   --primary-color: #c7126c;
   --secondary-color: #85dfd7;
+
+  // text
+  --text-color: #e3e2e2;
+  --inverted-text-color: #252323;
+
+  --link-color-primary: #2a2a2a;
+  --link-color-secondary: #444242;
+
+  --inverted-link-color-primary: #b4b2b2;
+  --inverted-link-color-secondary: #b4b3b3;
 }

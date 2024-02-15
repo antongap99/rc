@@ -4,7 +4,6 @@ const MainPage = () => {
     return (
         <div>
             MainPage
-            <Link to={'/about'}>О компании</Link>
         </div>
     );
 };

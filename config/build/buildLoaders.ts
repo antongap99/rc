@@ -2,6 +2,13 @@ import webpack from "webpack";
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import {BuildOptions} from "./types/config";
 export const buildLoaders = ({isDev}:BuildOptions):webpack.RuleSetRule[]=> {
+
+    const assetsLoader = {
+        test: /\.(png|jpg|jpeg|svg|webp)/,
+        type: 'asset/resource',
+    }
+
+
     // Важен порядок загрузки лоудеров
     const typescriptLoader = {
         test: /\.tsx?/i,
@@ -32,6 +39,7 @@ export const buildLoaders = ({isDev}:BuildOptions):webpack.RuleSetRule[]=> {
 
     return [
         typescriptLoader,
-        scssLoader
+        scssLoader,
+        assetsLoader
     ]
 }
