@@ -18,7 +18,7 @@ export const Button = (props: ButtonProps) =>{
     const {theme, className, children,  ...otherProps } = props;
     return  (
         <button
-            className={cn(style.Button, style[theme])} {...otherProps}
+            className={cn(style.Button, theme)} {...otherProps}
         >
             {children}
         </button>

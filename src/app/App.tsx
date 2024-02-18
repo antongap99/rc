@@ -4,7 +4,9 @@ import cn from 'classnames';
 import {useTheme} from "./providers/themeProvider";
 import {AppRouter} from "app/providers/router";
 import {Navbar} from "widgets/NavBar";
-import {ThemeSwitcher} from "widgets/ThemeSwitcherBtn";
+import {SideBar} from "widgets/SideBar";
+import 'shared/config/i18nConfig/i18n'
+
 
 
 const App = () => {
@@ -12,8 +14,13 @@ const App = () => {
 
     return (
         <div className={cn('app', theme)}>
-            <Navbar/>
-            <AppRouter/>
+            <Suspense fallback={'...перевод'}>
+                <Navbar/>
+                <div className="content-page">
+                    <AppRouter/>
+                    <SideBar/>
+                </div>
+            </Suspense>
         </div>
     );
 };

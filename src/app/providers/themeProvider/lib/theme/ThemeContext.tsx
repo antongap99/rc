@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
 interface  ThemeContextProps {
-    theme?:Theme,
+    theme:Theme,
     setTheme?: (theme:Theme) => void
 }
 

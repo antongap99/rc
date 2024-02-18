@@ -5,7 +5,7 @@ import {BrowserRouter} from "react-router-dom";
 import {ThemeProvider} from "./app/providers/themeProvider";
 
 
-const root = createRoot( document.getElementById('root'));
+const root = createRoot( document.getElementById('root') as HTMLElement);
 root.render(
     <BrowserRouter basename="/">
         <ThemeProvider>

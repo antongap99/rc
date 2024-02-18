@@ -2,4 +2,16 @@
 .app {
     font: var(--font-m);
     background-color: var(--bg-color);
+    min-height: 100vh;
+}
+
+
+.content-page {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.page-wrapper {
+    flex-grow: 1;
+    padding: 12px;
 }
