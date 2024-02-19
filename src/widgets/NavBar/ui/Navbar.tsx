@@ -1,8 +1,6 @@
-import React, {useEffect, useState} from "react";
 import cn from "classnames";
 import cls from './navBar.module.scss'
 import {AppLink} from "shared/ui/Link/Link";
-import {ThemeSwitcher} from "widgets/ThemeSwitcherBtn";
 import {useTranslation} from "react-i18next";
 
 interface  NavbarProps {

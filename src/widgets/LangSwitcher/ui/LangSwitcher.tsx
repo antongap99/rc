@@ -1,8 +1,7 @@
-import cn from "classnames";
 import {useTranslation} from "react-i18next";
 import React, {useEffect, useState} from "react";
 import {Button} from "shared/ui/Button/Button";
-
+import TranslateSvg from 'shared/assets/icons/translateSvg.svg'
 export enum Locales {
     RU = 'ru',
     EN = 'en',
@@ -28,7 +27,8 @@ export const LangSwitcher = ({}: LangSwitcherProps) =>{
         <div>
             <Button
                 onClick={toggleTranslation}
-            >{t('Перевод')}
+            >
+                <TranslateSvg/>
             </Button>
         </div>
     )
