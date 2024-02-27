@@ -13,7 +13,7 @@ const App = () => {
     const {theme} = useTheme();
 
     return (
-        <div className={cn('app', theme)}>
+      <div className={cn('app', theme)}>
             <Suspense fallback={'...перевод'}>
                 <Navbar/>
                 <div className="content-page">
