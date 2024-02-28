@@ -5,6 +5,7 @@ import AboutPage from "pages/ui/aboutPage/AboutPage";
 export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
+	MOT_FOUND='not_found'
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
