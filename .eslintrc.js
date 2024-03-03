@@ -13,7 +13,8 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: [
         '@typescript-eslint',
-        "jest"
+        "jest",
+        "i18next"
     ],
     parserOptions: {
         ecmaVersion: 'latest',
@@ -49,7 +50,17 @@ module.exports = {
         "jest/no-focused-tests": "error",
         "jest/no-identical-title": "error",
         "jest/prefer-to-have-length": "warn",
-        "jest/valid-expect": "error"
+        "jest/valid-expect": "error",
+        "max-len": [
+            "error",
+            {
+                "code": 100,
+                "ignoreUrls": true,
+                "ignoreComments": true
+            }
+        ],
+        "no-tabs": "off",
+        "no-mixed-spaces-and-tabs": "off",
     },
     globals: {
         '__IS_DEV__': true,

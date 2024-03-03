@@ -3,5 +3,7 @@
   "О компании": "About company",
   "Перевод": "Translate",
   "Главная страница": "Main page",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла не предвиденнная ошибка": "An unexpected error occurred",
+  "Обновить страницу": "Reload page"
 }

@@ -22,6 +22,8 @@ describe('classnames', () => {
 
     test('with mods and additional', () => {
         const expected = 'sameClass hover focus blur 123 string';
-        expect(classNames('sameClass', { hover: true, focus: true, blur: true }, ['123', 'string'])).toBe(expected);
+        expect(
+            classNames('sameClass', { hover: true, focus: true, blur: true }, ['123', 'string']),
+        ).toBe(expected);
     });
 });
