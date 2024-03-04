@@ -14,7 +14,7 @@ module.exports = {
     plugins: [
         '@typescript-eslint',
         "jest",
-        "i18next"
+        "i18next",
     ],
     parserOptions: {
         ecmaVersion: 'latest',

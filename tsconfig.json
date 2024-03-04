@@ -24,4 +24,9 @@
       ]
     }
   },
+  "include": [
+      "src",
+      "./app/styles/global.d.ts",
+      "./config/jest/setupTest.ts"
+  ]
 }

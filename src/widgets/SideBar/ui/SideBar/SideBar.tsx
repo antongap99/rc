@@ -19,8 +19,12 @@ export function SideBar({ className }: SideBarProps) {
     };
 
     return (
-        <div className={cn(style.SideBar, { [style.collapsed]: collapsed })}>
-            <Button className={style.collapseBtn} onClick={toggleCollapsed}>
+        <div data-testid="sidebar" className={cn(style.SideBar, { [style.collapsed]: collapsed })}>
+            <Button
+                data-testid="collapse-btn"
+                className={style.collapseBtn}
+                onClick={toggleCollapsed}
+            >
                 <CollapseIcon />
             </Button>
             <div className={style.switchers}>
