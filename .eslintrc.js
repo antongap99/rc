@@ -61,9 +61,21 @@ module.exports = {
         ],
         "no-tabs": "off",
         "no-mixed-spaces-and-tabs": "off",
+        'i18next/no-literal-string': [
+            'error',
+            { markupOnly: true, onlyAttribute: ["data-testid"] },
+        ],
     },
     globals: {
         '__IS_DEV__': true,
         "React": true,
-    }
+    },
+    overrides: [
+        {
+            files: ['**/src/**/*.test.{ts, tsx}'], // для файлов, которые матчатся будут переопределены правила
+            rules: {
+                'i18next/no-literal-string': "off"
+            }
+        }
+    ]
 };
