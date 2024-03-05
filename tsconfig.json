@@ -25,7 +25,9 @@
     }
   },
   "include": [
-      "src",
+      "src/../config/**/*.ts",
+      "src/**/*.ts",
+      "src/**/*.tsx",
       "./app/styles/global.d.ts",
       "./config/jest/setupTest.ts"
   ]

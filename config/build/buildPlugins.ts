@@ -6,7 +6,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
 export const buildPlugins = ({ paths, isDev }: BuildOptions):webpack.WebpackPluginInstance[] => {
-    const plagins = [
+    const plugins = [
         new HTMLWebpackPlugin({
             template: paths.html,
         }),
@@ -26,7 +26,7 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions):webpack.WebpackPlug
 	    }),
     ];
 
-    isDev && plagins.push(new ReactRefreshWebpackPlugin());
+    isDev && plugins.push(new ReactRefreshWebpackPlugin());
 
-    return plagins;
+    return plugins;
 };
