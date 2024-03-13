@@ -65,6 +65,7 @@ module.exports = {
             'error',
             { markupOnly: true, onlyAttribute: ["data-testid"] },
         ],
+        'no-param-reassign': 'off'
     },
     globals: {
         '__IS_DEV__': true,
