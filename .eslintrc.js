@@ -63,7 +63,7 @@ module.exports = {
         "no-mixed-spaces-and-tabs": "off",
         'i18next/no-literal-string': [
             'error',
-            { markupOnly: true, onlyAttribute: ["data-testid"] },
+            { markupOnly: true, onlyAttribute: ["data-testid"], ignoreAttribute: ['to'] },
         ],
         'no-param-reassign': 'off'
     },

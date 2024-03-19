@@ -18,6 +18,7 @@
   },
   "ts-node": {
     "compilerOptions": {
+      "esModuleInterop": true,
       "module": "CommonJS",
       "types": [
         "node"
@@ -29,6 +30,7 @@
       "src/**/*.ts",
       "src/**/*.tsx",
       "./app/styles/global.d.ts",
-      "./config/jest/setupTest.ts"
+      "./config/jest/setupTest.ts",
+      "src/../*.ts"
   ]
 }
