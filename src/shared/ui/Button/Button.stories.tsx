@@ -38,3 +38,10 @@ export const Clear: Story = {
         theme: ThemeBottom.CLEAR
     },
 };
+
+export const Outline: Story = {
+    args: {
+        children: "Text",
+        theme: ThemeBottom.OUTLINE
+    },
+};
