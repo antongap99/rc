@@ -5,7 +5,7 @@ import {Theme} from "app/providers/themeProvider";
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => {
     return (
-        <div className={cn('app', theme)}>
+        <div className={cn('storybook-wrapper', theme)}>
             <StoryComponent/>
         </div>
     )
