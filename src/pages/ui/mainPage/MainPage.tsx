@@ -7,7 +7,7 @@ function MainPage() {
 
     return (
         <div>
-            {t('Main page')}
+            {t('Главная страница')}
         </div>
     );
 }

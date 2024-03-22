@@ -30,5 +30,9 @@ export default  ({config}: {config: webpack.Configuration}) => {
     }
     // Добавляю свой лоудер svg
     config.module?.rules?.push(buildSvgLoader());
+    config.plugins?.push(new webpack.DefinePlugin({
+        __IS_DEV__: JSON.stringify(true),
+    }))
+
     return config;
 }
