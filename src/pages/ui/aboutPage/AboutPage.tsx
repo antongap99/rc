@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function AboutPage() {
     return (
       <div>
-          AboutPagge
+          AboutPage
         </div>
     );
 }
