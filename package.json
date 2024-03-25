@@ -4,7 +4,6 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "unit": "jest --config ./config/jest/jest.config.ts",
     "dev": "webpack serve --env port=3000",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
@@ -12,9 +11,11 @@
     "lint:fix": "eslint \"**/*.{ts, tsx}\" --fix",
     "lint:style": "npx stylelint \"**/*.{scss}\"",
     "lint:style:fix": "npx stylelint \"**/*.{scss}\" --fix",
+    "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook",
-    "chromatic": "npx chromatic --project-token=chpt_899b8fc1bbf478a"
+    "storybook:build": "storybook build -c ./config/storybook",
+    "test:ui": "npx chromatic --project-token=chpt_899b8fc1bbf478a",
+    "test:ui:ok": "npx chromatic --project-token=chpt_899b8fc1bbf478a --auto-accept-changes --build-script-name storybook:build"
   },
   "author": "",
   "license": "ISC",
