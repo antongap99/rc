@@ -12,6 +12,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-styling-webpack",
     "@storybook/addon-styling",
+    "@chromatic-com/storybook",
   ],
   framework: {
     name: "@storybook/react-webpack5",

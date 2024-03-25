@@ -13,7 +13,8 @@
     "lint:style": "npx stylelint \"**/*.{scss}\"",
     "lint:style:fix": "npx stylelint \"**/*.{scss}\" --fix",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "build-storybook": "storybook build -c ./config/storybook"
+    "build-storybook": "storybook build -c ./config/storybook",
+    "chromatic": "npx chromatic --project-token=chpt_899b8fc1bbf478a"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +24,7 @@
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
-    "@chromatic-com/storybook": "^1.2.23",
+    "@chromatic-com/storybook": "^1.2.25",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
     "@storybook/addon-essentials": "^8.0.1",
     "@storybook/addon-interactions": "^8.0.1",
