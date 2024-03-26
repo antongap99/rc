@@ -29,6 +29,8 @@ jobs:
 
       - name: Linting TypeScript
         run: npm run lint
+      - name: Linting TypeScript
+        run: npm run lint:fix
 
 #      -name: Linting SCSS
 #       run: npm run lint:style
