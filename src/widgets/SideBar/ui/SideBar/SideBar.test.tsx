@@ -6,7 +6,7 @@ describe('SideBar ', () => {
     test('test render', () => {
 	    renderWithTranslation(<SideBar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
-        screen.debug();
+        // screen.debug();
     });
 
     test('test collapse', () => {
@@ -15,6 +15,6 @@ describe('SideBar ', () => {
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(collapseBtn);
 	    expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
-        screen.debug();
+        // screen.debug();
     });
 });

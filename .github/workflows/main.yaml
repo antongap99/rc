@@ -27,8 +27,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-
-
       - name: Linting TypeScript
         run: npm run lint
 
