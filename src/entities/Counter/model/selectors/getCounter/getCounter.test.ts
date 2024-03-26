@@ -1,7 +1,5 @@
-
-
 describe('test', () => {
     test('mock test', () => {
-        expect(true).toBe(true)
-    })
-})
+        expect(true).toBe(true);
+    });
+});
