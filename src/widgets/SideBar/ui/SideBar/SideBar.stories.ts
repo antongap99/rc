@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {SideBar} from "widgets/SideBar";
-import {ThemeDecorator} from "shared/config/storybook/decorators/ThemeDecorator";
-import {Theme} from "app/providers/themeProvider";
+import type { Meta, StoryObj } from '@storybook/react';
+import { SideBar } from 'widgets/SideBar';
+import { ThemeDecorator } from 'shared/config/storybook/decorators/ThemeDecorator';
+import { Theme } from 'app/providers/themeProvider';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
@@ -19,7 +19,7 @@ const meta = {
     },
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     args: {},
-    decorators: []
+    decorators: [],
 } satisfies Meta<typeof SideBar>;
 
 export default meta;
@@ -28,12 +28,10 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Light: Story = {
     args: { },
-    decorators: [ThemeDecorator(Theme.Light)]
+    decorators: [ThemeDecorator(Theme.Light)],
 };
-
-
 
 export const Dark: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.Dark)]
+    decorators: [ThemeDecorator(Theme.Dark)],
 };

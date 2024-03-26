@@ -1,10 +1,10 @@
 import type webpack from 'webpack';
 import { type BuildOptions } from './types/config';
-import buildCssLoaders from "./loaders/buildCssLoaders";
-import {buildSvgLoader} from "./loaders/buildSvgLoader";
+import buildCssLoaders from './loaders/buildCssLoaders';
+import { buildSvgLoader } from './loaders/buildSvgLoader';
 
 export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => {
-    const svgLoader = buildSvgLoader()
+    const svgLoader = buildSvgLoader();
 
     const babelLoader = {
         test: /\.(js | ts | tsx )$/,
@@ -33,7 +33,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
         exclude: /node_modules/,
     };
 
-    const scssLoader = buildCssLoaders({isDev})
+    const scssLoader = buildCssLoaders({ isDev });
 
     return [
         babelLoader,

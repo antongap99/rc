@@ -27,6 +27,6 @@ export const buildPlugins = ({ paths, isDev }: BuildOptions):webpack.WebpackPlug
     isDev && plugins.push(new ReactRefreshWebpackPlugin());
     isDev && plugins.push(new BundleAnalyzerPlugin({
         openAnalyzer: false,
-    }))
+    }));
     return plugins;
 };
