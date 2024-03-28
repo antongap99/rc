@@ -8,6 +8,8 @@ import CollapseIcon from 'shared/assets/icons/collapseSvg.svg';
 import { AppLink } from 'shared/ui/Link/Link';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { useTranslation } from 'react-i18next';
+import HomeLinkIcon from 'shared/assets/icons/HomeLinkSvg.svg';
+import AboutLinkIcon from 'shared/assets/icons/AboutLinkSvg.svg';
 import style from './SideBar.module.scss';
 
 interface SideBarProps {
@@ -41,13 +43,19 @@ export function SideBar({ className }: SideBarProps) {
                     to={RoutePath.main}
                     className={cn(style.link, style.link_active)}
                 >
-                    {t('К главной')}
+                    <HomeLinkIcon />
+                    <span>
+                        {t('К главной')}
+                    </span>
                 </AppLink>
                 <AppLink
                     to={RoutePath.about}
                     className={cn(style.link)}
                 >
-                    {t('О компании')}
+                    <AboutLinkIcon />
+                    <span>
+                        {t('О компании')}
+                    </span>
                 </AppLink>
             </div>
             <div className={style.switchers}>

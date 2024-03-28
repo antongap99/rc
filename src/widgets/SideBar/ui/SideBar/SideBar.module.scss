@@ -57,14 +57,40 @@
   padding-left: 30px;
 }
 
-.link {
+.item {
+  display: flex;
   margin-top: 10px;
+  gap: 10px;
+}
+
+
+
+.link  {
   display: flex;
   align-content: center;
   gap: 12px;
   justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+
+.link svg {
+  fill:  var(--inverted-bg-color);
+  width: 40px;
+}
+
+.link span {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .link_active {
 
+}
+
+.collapsed {
+  .link span {
+    opacity: 0;
+    height: 0;
+  }
 }
