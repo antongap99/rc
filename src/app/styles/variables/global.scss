@@ -34,6 +34,8 @@
   --primary-color: #e94995;
   --secondary-color: #80f4ec;
 
+  --overlay-color: rgba(0 0 0 / 60%);
+
   // text
   --text-color: #252323;
   --inverted-text-color: #e3e2e2;
@@ -46,6 +48,10 @@
 
   //  icons
   --icons-color: #282727;
+
+
+  // z-index
+  --modal-z-index: 10;
   
 }
 

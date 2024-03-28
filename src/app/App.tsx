@@ -6,6 +6,7 @@ import { Navbar } from 'widgets/NavBar';
 import { SideBar } from 'widgets/SideBar';
 import { useTheme } from './providers/themeProvider';
 import 'shared/config/i18nConfig/i18n';
+import { Modal } from 'shared/ui/Modal/ui/Modal';
 
 const App = () => {
     const { theme } = useTheme();
@@ -14,6 +15,7 @@ const App = () => {
         <div className={cn('app', theme)}>
             <Suspense fallback="...перевод">
                 <Navbar />
+                <Modal />
                 <div className="content-page">
                     <AppRouter />
                     <SideBar />
