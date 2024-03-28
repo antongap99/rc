@@ -1,6 +1,6 @@
-import { useTranslation } from 'react-i18next';
-import React, { useEffect, useState } from 'react';
-import { Button } from 'shared/ui/Button/Button';
+import {useTranslation} from 'react-i18next';
+import React, {useEffect, useState} from 'react';
+import {Button, ButtonTheme} from 'shared/ui/Button/Button';
 import TranslateSvg from 'shared/assets/icons/translateSvg.svg';
 import i18n from 'shared/config/i18nConfig/i18n'
 
@@ -29,6 +29,7 @@ export const LangSwitcher = ({}: LangSwitcherProps) => {
         <div>
             <Button
                 onClick={toggleTranslation}
+                theme={ButtonTheme.CLEAR}
             >
                 <TranslateSvg />
             </Button>
