@@ -17,12 +17,16 @@ export const Modal = (props: ModalProps) => {
     } = props;
 
     const mods: Record<string, boolean> = {
-        [style.opened]: isOpen,
+        [style.opened]: !!isOpen,
     };
+
+    const closeHandler = () => {
+        onClose?.()
+    }
 
     return (
         <div className={cn(style.Modal, className, mods)}>
-            <div className={style.overlay}>
+            <div className={style.overlay} onClick={closeHandler}>
                 <div className={style.content}>
                     {
                         children
