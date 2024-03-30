@@ -8,7 +8,7 @@
 
   opacity: 0;
   pointer-events: none;
-
+  transition: z-index 0.3s ease-in-out, opacity 0.1s ease-in;
 }
 
 
@@ -25,7 +25,11 @@
   padding: 25px;
   border-radius: 12px;
   background: var(--bg-color);
-  transform: scale(0.5);
+  transform: scale(0.2);
+  max-width: 60%;
+  color: var(--text-color);
+  transition: transform 0.2s ease-in-out;
+  word-break: break-word;
 }
 
 
@@ -36,5 +40,14 @@
 
   .content {
     transform: scale(1);
+  }
+}
+
+
+
+
+.isClosing {
+  .content {
+    transform: scale(0.2)
   }
 }
