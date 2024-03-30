@@ -2,8 +2,8 @@ import {
     ReactNode, SyntheticEvent, useEffect, useRef, useState,
 } from 'react';
 import cn from 'classnames';
-import { ReducerType } from '@reduxjs/toolkit';
 import { Portal } from 'shared/ui/Portal/Portal';
+import { useTheme } from 'app/providers/themeProvider';
 import style from './Modal.module.scss';
 
 export interface ModalProps {
