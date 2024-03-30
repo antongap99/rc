@@ -30,13 +30,13 @@ type Story = StoryObj<typeof meta>;
 export const LightModal: Story = {
     decorators: [ThemeDecorator(Theme.Light)],
     args: {
-
+	    className: Theme.Light,
     },
 };
 
 export const DarkModal: Story = {
     decorators: [ThemeDecorator(Theme.Dark)],
     args: {
-
+        className: Theme.Dark,
     },
 };
