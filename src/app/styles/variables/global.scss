@@ -10,6 +10,11 @@
   --font-line-l: 32px;
   --font-l: var(--font-size-l)/ var(--font-line-l) var(--font-family-main);
 
+  --font-size-xl: 32px;
+  --font-line-xl: 48px;
+
+  --font-xl: var(--font-size-xl)/ var(--font-line-xl) var(--font-family-main);
+
   --navbar-height: 80px;
 
 
@@ -29,6 +34,8 @@
   --primary-color: #e94995;
   --secondary-color: #80f4ec;
 
+  --overlay-color: rgba(0 0 0 / 60%);
+
   // text
   --text-color: #252323;
   --inverted-text-color: #e3e2e2;
@@ -41,6 +48,10 @@
 
   //  icons
   --icons-color: #282727;
+
+
+  // z-index
+  --modal-z-index: 10;
   
 }
 

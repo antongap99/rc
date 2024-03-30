@@ -1,12 +1,11 @@
-import {StoryFn} from "@storybook/react";
-import cn from "classnames";
-import {Theme} from "app/providers/themeProvider";
+import { StoryFn } from '@storybook/react';
+import cn from 'classnames';
+import { Theme, ThemeProvider } from 'app/providers/themeProvider';
 
-
-export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => {
-    return (
+export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => (
+    <ThemeProvider defaultTheme={Theme.Light}>
         <div className={cn('storybook-wrapper', theme)}>
-            <StoryComponent/>
+            <StoryComponent />
         </div>
-    )
-}
+    </ThemeProvider>
+);

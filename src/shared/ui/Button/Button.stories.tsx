@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import {Button, ThemeBottom} from './Button';
-
+import CollapseIcon from 'shared/assets/icons/collapseSvg.svg';
+import { Button, ButtonSize, ButtonTheme } from './Button';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
     title: 'shared/Button',
@@ -26,22 +26,76 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
     args: {
-        children: "Text"
+        children: 'Text',
     },
 };
 
-
-
 export const Clear: Story = {
     args: {
-        children: "Text",
-        theme: ThemeBottom.CLEAR
+        children: 'Text',
+        theme: ButtonTheme.CLEAR,
     },
 };
 
 export const Outline: Story = {
     args: {
-        children: "Text",
-        theme: ThemeBottom.OUTLINE
+        children: 'Text',
+        theme: ButtonTheme.OUTLINE,
+    },
+};
+
+export const Background: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND,
+    },
+};
+
+export const BackgroundInverted: Story = {
+    args: {
+        children: 'Text',
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+    },
+};
+
+export const Squere: Story = {
+    args: {
+        children: <CollapseIcon />,
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+    },
+};
+
+export const SizeM: Story = {
+    args: {
+        children: <CollapseIcon />,
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.M,
+    },
+};
+
+export const SizeL: Story = {
+    args: {
+        children: <CollapseIcon />,
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.L,
+    },
+};
+
+export const SizeXl: Story = {
+    args: {
+        children: <CollapseIcon />,
+        theme: ButtonTheme.BACKGROUND_INVERTED,
+        square: true,
+        size: ButtonSize.XL,
+    },
+};
+
+export const ClearInverted: Story = {
+    args: {
+        children: 'text',
+        theme: ButtonTheme.CLEAR_INVERTED,
     },
 };
