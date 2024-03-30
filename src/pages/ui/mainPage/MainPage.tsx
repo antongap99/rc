@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function MainPage() {
