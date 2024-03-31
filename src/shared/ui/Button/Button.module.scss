@@ -52,3 +52,7 @@
   width: var(--font-line-xl);
   height: fit-content;
 }
+
+.disabled {
+  opacity: 0.5;
+}
