@@ -5,7 +5,7 @@ export function createReduxStore(initialState?: StateSchema) {
     return configureStore<StateSchema>({
         reducer: {
         },
-        devTools: true, // TODO в проде нужно убрать
+        devTools: __IS_DEV__,
         preloadedState: initialState,
     });
 }

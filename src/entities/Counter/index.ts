@@ -1,5 +1,5 @@
-import { Counter } from 'entities/Counter/ui/Counter';
-import { CounterSchema } from 'entities/Counter/model/types/CounterSchema';
+import { Counter } from './ui/Counter';
+import { CounterSchema } from './model/types/CounterSchema';
 
 export {
     Counter,
