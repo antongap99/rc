@@ -11,7 +11,7 @@ const initialState: UserSchema = {
 };
 
 export const counterSlice = createSlice({
-    name: 'user11111',
+    name: 'user1',
     initialState,
     reducers: {
         increment: (state) => {
