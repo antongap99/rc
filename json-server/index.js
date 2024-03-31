@@ -2,12 +2,16 @@ const express = require('express');
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
 const path = require('path');
-
+const cors = require('cors')
 const app = express();
 const PORT = 8000;
 
 app.use(express.json());
 
+app.use(cors({
+	// TODO добавить в env
+	origin: 'http://localhost:3000'
+}));
 app.use(async (req, res, next) => {
 	await new Promise((resolve) => {
 		setTimeout(resolve, 800);
@@ -24,8 +28,9 @@ app.use(async (req, res, next) => {
 
 const dbFilePath = path.resolve(__dirname, 'db.json');
 
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
 	const { username, password } = req.body;
+	console.log('log password', username, password)
 	const db = JSON.parse(fs.readFileSync(dbFilePath, 'UTF-8'));
 	const { users } = db;
 
