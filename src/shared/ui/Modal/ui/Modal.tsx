@@ -11,6 +11,7 @@ export interface ModalProps {
     children?: ReactNode,
     isOpen?: boolean,
     onClose? : () => void,
+	lazy?: boolean
 }
 
 const ANIMATION_DELAY = 300;
@@ -21,9 +22,11 @@ export const Modal = (props: ModalProps) => {
         children,
         isOpen,
         onClose,
+	    lazy = false,
     } = props;
     const [isClosing, setIsClosing] = useState<boolean>(false);
     const timeRef = useRef<ReturnType<typeof setTimeout>>();
+    const [isMounted, setIsMounted] = useState<boolean>(false); // для lazy подгрузки
 
     const mods: Record<string, boolean> = {
         [style.opened]: !!isOpen,
@@ -45,6 +48,14 @@ export const Modal = (props: ModalProps) => {
     };
 
     useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        } else {
+	        setIsMounted(false);
+        }
+    }, [isOpen]);
+
+    useEffect(() => {
 	    const keyDownHandler = (event: KeyboardEvent) => {
 		    if (event.key === 'Escape') {
 			    onClose?.();
@@ -60,6 +71,10 @@ export const Modal = (props: ModalProps) => {
             window.removeEventListener('keydown', keyDownHandler);
         };
     }, [onClose, isOpen]);
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>
