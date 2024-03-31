@@ -2,6 +2,7 @@ import cn from 'classnames';
 import {
     ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
+import { isDocumentVisible } from '@reduxjs/toolkit/dist/query/utils';
 import style from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
