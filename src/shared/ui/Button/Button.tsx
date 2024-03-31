@@ -8,7 +8,6 @@ export enum ButtonTheme {
     OUTLINE = 'outline',
     BACKGROUND = 'background',
     BACKGROUND_INVERTED = 'background_inverted'
-
 }
 
 export enum ButtonSize {
@@ -22,7 +21,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     theme?: ButtonTheme
     children: ReactNode
     square?: boolean,
-    size?: ButtonSize
+    size?: ButtonSize,
+	disabled?: boolean,
 }
 export const Button = (props: ButtonProps) => {
     const {
@@ -31,6 +31,7 @@ export const Button = (props: ButtonProps) => {
         children,
         square,
         size = ButtonSize.M,
+	    disabled = false,
         ...otherProps
     } = props;
 
@@ -38,12 +39,14 @@ export const Button = (props: ButtonProps) => {
         [style[theme]]: true,
         [style.square]: !!square,
         [style[size]]: !!size,
+	    [style.disabled]: disabled,
     };
 
     return (
         <button
             type="button"
             className={cn(style.Button, ButtonTheme, className, 'button_style', mods)}
+            disabled
             {...otherProps}
         >
             {children}
