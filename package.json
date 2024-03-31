@@ -16,7 +16,8 @@
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
     "test:ui": "npx chromatic --project-token=chpt_899b8fc1bbf478a",
-    "test:ui:ok": "npx chromatic --project-token=chpt_899b8fc1bbf478a --auto-accept-changes --build-script-name storybook:build"
+    "test:ui:ok": "npx chromatic --project-token=chpt_899b8fc1bbf478a --auto-accept-changes --build-script-name storybook:build",
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
@@ -67,6 +68,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "express": "^4.19.2",
     "html-webpack-plugin": "^5.5.3",
+    "husky": "^9.0.11",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
