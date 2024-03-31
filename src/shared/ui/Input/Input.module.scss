@@ -1,0 +1,18 @@
+.InputWrapper {
+  display: flex;
+}
+
+.placeHolder {
+  color: var(--primary-color)
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--primary-color);
+
+  &:focus-visible {
+    outline: none;
+  }
+}
