@@ -20,7 +20,8 @@ export function SideBar({ className }: SideBarProps) {
     const [collapsed, setCollapsed] = useState(false);
     const { t } = useTranslation();
 
-    const toggleCollapsed = (): void => {
+    const toggleCollapsed = () => {
+        console.log('toggleCollapsed')
         setCollapsed(!collapsed);
     };
 
