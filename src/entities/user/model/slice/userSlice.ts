@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User, UserSchema } from '../types/types';
 
 const initialState: UserSchema = {
-
+    authData: undefined,
 };
 
 export const userSlice = createSlice({

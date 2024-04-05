@@ -1,8 +1,8 @@
 import {
-    FC, PropsWithChildren, ReactNode, useMemo, useState,
+    FC, PropsWithChildren, useMemo, useState,
 } from 'react';
 import { Theme, ThemeContext } from './lib/theme/ThemeContext';
-import { LOCAL_STORAGE_THEME_KEY, useTheme } from './lib/theme/useTheme';
+import { LOCAL_STORAGE_THEME_KEY } from './lib/theme/useTheme';
 
 interface ThemeProviderProps {
 	defaultTheme?: Theme.Light

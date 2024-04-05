@@ -1,4 +1,4 @@
-import { userActions, userReducer } from './model/silce/userSlice';
+import { userActions, userReducer } from './model/slice/userSlice';
 import type { UserSchema, User } from './model/types/types';
 
 export {

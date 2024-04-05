@@ -7,7 +7,7 @@
   bottom: 0;
 
   opacity: 0;
-  pointer-events: none;
+  //pointer-events: none;
   transition: z-index 0.3s ease-in-out, opacity 0.1s ease-in;
 }
 
@@ -35,7 +35,7 @@
 
 .opened {
   opacity: 1;
-  pointer-events: all;
+  //pointer-events: all;
   z-index: var(--modal-z-index);
 
   .content {

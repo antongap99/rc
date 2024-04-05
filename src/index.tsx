@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {StrictMode} from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
@@ -13,7 +13,9 @@ root.render(
         <ErrorBoundary>
             <StoreProvider>
                 <ThemeProvider>
-                    <App />
+                    <StrictMode>
+                        <App />
+                    </StrictMode>
                 </ThemeProvider>
             </StoreProvider>
         </ErrorBoundary>
