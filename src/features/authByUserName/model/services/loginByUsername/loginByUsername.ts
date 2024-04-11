@@ -1,7 +1,6 @@
-import { createAsyncThunk, PayloadAction, ThunkAction } from '@reduxjs/toolkit';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { User } from 'entities/user';
-import { RootState } from '@reduxjs/toolkit/query';
 
 export interface loginByUserNameProps {
 	username: string,

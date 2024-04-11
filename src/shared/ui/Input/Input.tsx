@@ -2,7 +2,6 @@ import cn from 'classnames';
 import {
     ChangeEvent, InputHTMLAttributes, memo, useEffect, useRef, useState,
 } from 'react';
-import { isDocumentVisible } from '@reduxjs/toolkit/dist/query/utils';
 import style from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
@@ -30,14 +29,6 @@ export const Input = memo((props: InputProps) => {
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
     };
-
-    useEffect(() => {
-	    console.log('autoFocus', autoFocus);
-        if (autoFocus) {
-	        console.log('inputRef.current', inputRef.current);
-	        inputRef.current?.focus();
-        }
-    }, []);
 
     return (
         <div className={cn(style.InputWrapper, className)}>
