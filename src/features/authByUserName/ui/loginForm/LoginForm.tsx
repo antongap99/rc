@@ -4,12 +4,12 @@ import { Button } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import style from './LoginForm.module.scss';
 
-interface LoginFormProps {
+export interface LoginFormProps {
     className?: string;
 
 }
 
-export const LoginForm = ({ className }: LoginFormProps) => {
+const LoginForm = ({ className }: LoginFormProps) => {
     const { t } = useTranslation();
     return (
         <div className={cn(style.LoginForm, className)}>
@@ -28,3 +28,5 @@ export const LoginForm = ({ className }: LoginFormProps) => {
         </div>
     );
 };
+
+export default LoginForm;

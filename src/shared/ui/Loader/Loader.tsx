@@ -6,5 +6,7 @@ interface LoaderProps {
 }
 
 export const Loader = ({ className }: LoaderProps) => (
-    <span className={style.loader} />
+    <div className={style.loaderWrapper} >
+        <span className={style.loader} />
+    </div>
 );

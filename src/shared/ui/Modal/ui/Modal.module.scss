@@ -30,6 +30,8 @@
   color: var(--text-color);
   transition: transform 0.2s ease-in-out;
   word-break: break-word;
+  min-width: 300px;
+  min-height: 250px;
 }
 
 
