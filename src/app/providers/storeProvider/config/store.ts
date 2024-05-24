@@ -1,7 +1,7 @@
-import {combineReducers, configureStore, ReducersMapObject} from '@reduxjs/toolkit';
+import { combineReducers, configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { StateSchema } from 'app/providers/storeProvider/config/StateSchema';
 import { userReducer } from 'entities/user';
-import { loginReducer } from "features/authByUserName";
+import { loginReducer } from 'features/authByUserName';
 
 const rootReducer: ReducersMapObject<StateSchema> = {
     user: userReducer,
