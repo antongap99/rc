@@ -13,8 +13,11 @@ const loginSlice = createSlice({
         setUserName: (state, payload: PayloadAction<string>) => {
             state.username = payload.payload;
         },
+        setPassword: (state, payload: PayloadAction<string>) => {
+            state.password = payload.payload;
+        },
     },
 });
 
 export const { actions: loginActions } = loginSlice;
-export const { actions: loginReducer } = loginSlice;
+export const { reducer: loginReducer } = loginSlice;
