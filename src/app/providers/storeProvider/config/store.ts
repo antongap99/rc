@@ -3,10 +3,10 @@ import { StateSchema } from 'app/providers/storeProvider/config/StateSchema';
 import { userReducer } from 'entities/user';
 import { loginReducer } from 'features/authByUserName';
 
-const rootReducer: ReducersMapObject<StateSchema> = {
+const rootReducer = combineReducers({
     user: userReducer,
     loginForm: loginReducer,
-};
+});
 
 export function createReduxStore(initialState?: StateSchema) {
     return configureStore<StateSchema>({

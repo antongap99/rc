@@ -7,6 +7,7 @@ import {useCallback} from "react";
 import {useAppDispatch, useAppSelector} from "shared/storeHooks/hooks";
 import {loginActions} from '../../model/slice/loginSlice';
 import {getLoginState} from "../../model/selectors/getLoginState";
+import {fetchUserById} from "features/authByUserName/services/LoginByUsername/LoginByUsername";
 
 export interface LoginFormProps {
     className?: string;
@@ -26,6 +27,10 @@ const LoginForm = ({ className }: LoginFormProps) => {
         dispatch(loginActions.setPassword(value))
     }, [dispatch])
 
+    const onLoginClick = useCallback(() => {
+        loginState && dispatch(fetchUserById({...loginState}))
+    }, [dispatch])
+
     return (
         <div className={cn(style.LoginForm, className)}>
             <Input
@@ -43,7 +48,7 @@ const LoginForm = ({ className }: LoginFormProps) => {
                 onChange={onChangePassword}
                 value={loginState?.password}
             />
-            <Button className={style.LoginBtn}>{t('Войти')}</Button>
+            <Button className={style.LoginBtn} onClick={() => onLoginClick()}>{t('Войти')}</Button>
         </div>
     );
 };
