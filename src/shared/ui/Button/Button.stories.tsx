@@ -99,3 +99,12 @@ export const ClearInverted: Story = {
         theme: ButtonTheme.CLEAR_INVERTED,
     },
 };
+
+
+export const Disabled: Story = {
+    args: {
+        children: 'text',
+        theme: ButtonTheme.OUTLINE,
+        disabled: true
+    },
+};

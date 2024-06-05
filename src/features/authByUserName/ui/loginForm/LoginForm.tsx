@@ -17,7 +17,7 @@ export interface LoginFormProps {
 const LoginForm = ({ className }: LoginFormProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch()
-    const loginState = useAppSelector(getLoginState)
+    const {username, password, isLoading, error} = useAppSelector(getLoginState)
 
     const onChangeUsername = useCallback((value: string) => {
         dispatch(loginActions.setUserName(value))
@@ -28,25 +28,26 @@ const LoginForm = ({ className }: LoginFormProps) => {
     }, [dispatch])
 
     const onLoginClick = useCallback(() => {
-        loginState && dispatch(fetchUserById({...loginState}))
-    }, [dispatch])
+        username && password && dispatch(fetchUserById({username, password}))
+    }, [dispatch, username, password])
 
     return (
         <div className={cn(style.LoginForm, className)}>
+            {error && <div>error</div>}
             <Input
                 type="text"
                 className={style.input}
                 placeHolder={t('Логин')}
                 autoFocus
                 onChange={onChangeUsername}
-                value={loginState?.username}
+                value={username}
             />
             <Input
                 type="text"
                 className={style.input}
                 placeHolder={t('Пароль')}
                 onChange={onChangePassword}
-                value={loginState?.password}
+                value={password}
             />
             <Button className={style.LoginBtn} onClick={() => onLoginClick()}>{t('Войти')}</Button>
         </div>

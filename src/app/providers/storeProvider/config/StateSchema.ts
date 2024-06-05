@@ -3,5 +3,5 @@ import { LoginSchema } from 'features/authByUserName';
 
 export interface StateSchema {
 	user: UserSchema,
-	loginForm?: LoginSchema
+	loginForm: LoginSchema
 }

@@ -28,4 +28,6 @@ body {
     justify-content: center;
     font: var(--font-m);
     background-color: var(--bg-color);
+    min-width: 400px;
+    min-height: 400px;
 }
