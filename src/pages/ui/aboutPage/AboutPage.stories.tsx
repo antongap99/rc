@@ -34,7 +34,7 @@ export const Light: Story = {
     args: {
         children: 'text',
     },
-    decorators: [ThemeDecorator(Theme.Light)]
+    decorators: [ThemeDecorator()]
 };
 
 
@@ -43,5 +43,5 @@ export const Dark: Story = {
     args: {
         children: 'text',
     },
-    decorators: [ThemeDecorator(Theme.Dark)]
+    decorators: [ThemeDecorator()]
 };

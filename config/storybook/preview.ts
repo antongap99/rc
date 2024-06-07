@@ -13,7 +13,7 @@ const preview: Preview = {
             },
         },
     },
-    decorators: [ThemeDecorator(Theme.Dark), RouterDecorator],
+    decorators: [ThemeDecorator(), RouterDecorator],
 };
 
 export default preview;

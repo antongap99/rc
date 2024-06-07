@@ -34,7 +34,7 @@ export const Primary: Story = {
         children: 'text',
         theme: AppLinkTheme.Primary
     },
-    decorators: [ThemeDecorator(Theme.Light)]
+    decorators: [ThemeDecorator()]
 };
 
 
@@ -44,5 +44,5 @@ export const Secondary: Story = {
         children: 'text',
         theme: AppLinkTheme.Secondary
     },
-    decorators: [ThemeDecorator(Theme.Light)]
+    decorators: [ThemeDecorator()]
 };

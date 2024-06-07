@@ -28,14 +28,14 @@ type Story = StoryObj<typeof meta>;
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const LightModal: Story = {
-    decorators: [ThemeDecorator(Theme.Light)],
+    decorators: [ThemeDecorator()],
     args: {
 	    className: Theme.Light,
     },
 };
 
 export const DarkModal: Story = {
-    decorators: [ThemeDecorator(Theme.Dark)],
+    decorators: [ThemeDecorator()],
     args: {
         className: Theme.Dark,
     },
